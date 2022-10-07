@@ -27,6 +27,7 @@ const crazySum = (x, y) => {
     return (x + y) * 3;
   } else {
     console.log(x + y);
+    return x + y;
   }
 };
 console.log(crazySum(23, 23));
