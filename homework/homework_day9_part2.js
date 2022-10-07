@@ -151,6 +151,7 @@ console.log(latestShoppingCart(shoppingCart));
  The function loops and prints a random number between 0 and 9 until the random number is bigger 
  than x for three times in a row.
 */
+const loopUntil = (x) => {};
 // const loopUntil = (x) => {
 //   let randomNr = Math.floor(Math.random() * 8 + 1);
 //   let count = 0;
