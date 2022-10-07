@@ -152,41 +152,7 @@ console.log(latestShoppingCart(shoppingCart));
  than x for three times in a row.
 */
 const loopUntil = (x) => {};
-// const loopUntil = (x) => {
-//   let randomNr = Math.floor(Math.random() * 8 + 1);
-//   let count = 0;
-// do {
-//   console.log({ randomNr });
-//   console.log({ x });
-//   if (randomNr > x) {
-//     count++;
-//   } else {
-//     count--;
-//   }
-// } while (count % 3 === 0);
-// console.log({ count });
-
-// while (count % 3 === 0) {
-//   console.log({ randomNr });
-//   if (randomNr > x) {
-//     count++;
-//   } else {
-//     count--;
-//   }
-// }
-// console.log({ count });
-
-//   if (randomNr > x) {
-//     count++
-//     while (count % 3 === 0) {
-
-//     }
-//   } else {
-//     count--
-//   }
-//   while
-// };
-// console.log(loopUntil(3));
+console.log(loopUntil);
 
 /* EXTRA 7
  Write a function called "average" which receives an array and returns the average numerical value. 
@@ -235,12 +201,30 @@ console.log(longest(mixedStringArray));
  The function takes a string emailContent, and returns a boolean.
  The function should return true if the emailContent string does not contain the words SPAM or SCAM.
 */
+const antiSpam = (emailContent) => {
+  return emailContent.toLowerCase().includes("spam") ||
+    emailContent.toLowerCase().includes("scam")
+    ? "this mail might be a SCAM/SPAM! Stay clear!"
+    : true;
+};
+console.log(antiSpam("lkasj dk;sja dg spAm"));
+console.log(antiSpam("lkasj dk;sja dgspAm"));
+console.log(antiSpam("lkasj dk;sja dgsAm"));
 
 /* EXTRA 10
- Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
+ Write a function that receives a date as a parameter and calculates the number 
+ of days passed since the given date.
 */
+const dateCalculator = (dateInEposchTime) => {
+  let secondsInDay = 86400;
+  let currentDate = Math.floor(new Date().getTime() / 1000.0);
+  let daysPast = Math.floor((currentDate - dateInEposchTime) / secondsInDay);
+  console.log({ currentDate });
+  console.log({ daysPast });
 
-/* WRITE YOUR ANSWER HERE */
+  return `based on the current time, ${daysPast} days have past since your inputted time`;
+};
+console.log(dateCalculator(1664652295));
 
 /* EXTRA 11
  Write a function called "matrixGenerator" which receives two integers, x and y, as parameters.
@@ -249,9 +233,8 @@ console.log(longest(mixedStringArray));
  ["00","01","02"
  "10","11","12"]
 */
-
-/* WRITE YOUR ANSWER HERE */
-
+const matrixGenerator = (x, y) => {};
+console.log(matrixGenerator(3, 2));
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
 */
