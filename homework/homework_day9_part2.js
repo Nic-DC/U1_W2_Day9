@@ -151,30 +151,89 @@ console.log(latestShoppingCart(shoppingCart));
  The function loops and prints a random number between 0 and 9 until the random number is bigger 
  than x for three times in a row.
 */
-const loopUntil = (int) => {
-    let randomNr = Math.floor(Math.random() * 8 + 1);
-    if 
-};
-console.log(loopUntil(4));
+// const loopUntil = (x) => {
+//   let randomNr = Math.floor(Math.random() * 8 + 1);
+//   let count = 0;
+// do {
+//   console.log({ randomNr });
+//   console.log({ x });
+//   if (randomNr > x) {
+//     count++;
+//   } else {
+//     count--;
+//   }
+// } while (count % 3 === 0);
+// console.log({ count });
+
+// while (count % 3 === 0) {
+//   console.log({ randomNr });
+//   if (randomNr > x) {
+//     count++;
+//   } else {
+//     count--;
+//   }
+// }
+// console.log({ count });
+
+//   if (randomNr > x) {
+//     count++
+//     while (count % 3 === 0) {
+
+//     }
+//   } else {
+//     count--
+//   }
+//   while
+// };
+// console.log(loopUntil(3));
 
 /* EXTRA 7
- Write a function called "average" which receives an array and returns the average numerical value. The function automatically skips non-numeric entries in the array.
+ Write a function called "average" which receives an array and returns the average numerical value. 
+ The function automatically skips non-numeric entries in the array.
 */
-
-/* WRITE YOUR ANSWER HERE */
+let mixedArray = ["s df", 3, 4, "sccgdg", true, 45];
+const average = (array) => {
+  let sum = 0;
+  let average = 0;
+  let numbersArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] === "number") {
+      numbersArray.push(array[i]);
+      sum += array[i];
+    } else {
+      continue;
+    }
+  }
+  console.log({ sum });
+  console.log({ numbersArray });
+  console.log(numbersArray.length);
+  average = sum / numbersArray.length;
+  console.log({ average });
+};
+console.log(average(mixedArray));
 
 /* EXTRA 8
  Write a function called "longest" to find the longest string from a given array of strings.
 */
-
-/* WRITE YOUR ANSWER HERE */
+let mixedStringArray = ["s df", "sccgdg", " ", "asdgasgasg sa asg "];
+const longest = (array) => {
+  let max = 0;
+  let winningString = "";
+  for (let i = 0; i < array.length; i++) {
+    if (max < array[i].length) {
+      max = array[i].length;
+      winningString = array[i];
+    }
+  }
+  return `the winning string is "${winningString}", because it has the maximum amount of characters: ${max}`;
+};
+console.log(longest(mixedStringArray));
 
 /* EXTRA 9
- Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
+ Write a function to create a very simple anti spam filter for your mailbox. 
+ The function takes a string emailContent, and returns a boolean.
  The function should return true if the emailContent string does not contain the words SPAM or SCAM.
 */
-
-/* WRITE YOUR ANSWER HERE */
 
 /* EXTRA 10
  Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
