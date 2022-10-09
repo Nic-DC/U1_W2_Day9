@@ -233,7 +233,25 @@ console.log(dateCalculator(1664652295));
  ["00","01","02"
  "10","11","12"]
 */
-const matrixGenerator = (x, y) => {};
+const matrixGenerator = (x, y) => {
+  let matrix = [];
+  for (let i = 0; i < y; i++) {
+    for (let j = 0; j < x; j++) {
+      console.log(`${i}${j}`);
+      matrix.push(`${i}${j}`);
+    }
+  }
+  console.log({ matrix });
+
+  // TRIED TO SEE IF I CAN CREATE A MATRIX VISUALLY
+  // let designMatrix = ["00", "01", "02", "10", "11", "12"];
+  // for (let i = 0; i < designMatrix.length; i++) {
+  //   if (designMatrix[i][y] === `y`) {
+  //     designMatrix.splice(x, 0, "\n");
+  //   }
+  // }
+  // console.log({ designMatrix });
+};
 console.log(matrixGenerator(3, 2));
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
